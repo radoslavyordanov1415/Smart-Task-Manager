@@ -1,0 +1,216 @@
+/* ── Global ──────────────────────────────────────────────────── */
+:root {
+  --stm-primary: #4f46e5;
+  --stm-primary-light: #e0e7ff;
+  --stm-bg: #f5f6fa;
+  --stm-card-radius: 12px;
+  --stm-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background-color: var(--stm-bg);
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Auth page ───────────────────────────────────────────────── */
+.auth-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+.auth-bg .card {
+  border: none;
+  border-radius: var(--stm-card-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+.app-navbar {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+.app-navbar .navbar-brand {
+  color: #1f2937 !important;
+}
+
+/* ── User avatar circle ──────────────────────────────────────── */
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--stm-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+.user-avatar:hover {
+  box-shadow: 0 0 0 3px var(--stm-primary-light);
+}
+
+/* ── Nav pills ───────────────────────────────────────────────── */
+.nav-pill-custom {
+  border-radius: 20px !important;
+  padding: 0.35rem 1rem !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #6b7280 !important;
+  transition: all 0.15s;
+}
+.nav-pill-custom:hover {
+  color: var(--stm-primary) !important;
+  background-color: var(--stm-primary-light) !important;
+}
+.nav-pill-custom.active {
+  background-color: var(--stm-primary) !important;
+  color: #fff !important;
+}
+
+/* ── Cards ───────────────────────────────────────────────────── */
+.card-modern {
+  border: none;
+  border-radius: var(--stm-card-radius);
+  box-shadow: var(--stm-shadow);
+}
+.card {
+  border-radius: var(--stm-card-radius);
+  box-shadow: var(--stm-shadow);
+}
+
+/* ── Filter pills ────────────────────────────────────────────── */
+.filter-pill {
+  border-radius: 16px !important;
+  font-size: 0.78rem !important;
+  padding: 0.2rem 0.65rem !important;
+}
+
+/* ── Badge pill ──────────────────────────────────────────────── */
+.badge-pill {
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Task table ──────────────────────────────────────────────── */
+.task-table {
+  border: none;
+  border-radius: var(--stm-card-radius);
+  overflow: hidden;
+  box-shadow: var(--stm-shadow);
+}
+.task-table thead th {
+  background-color: #f8f9fc;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #e5e7eb;
+}
+.task-table tbody tr {
+  transition: background-color 0.12s, border-left-color 0.12s;
+  border-left: 3px solid transparent;
+}
+.task-table tbody tr:hover {
+  background-color: #f8f9fc;
+  border-left-color: var(--stm-primary);
+}
+
+/* done rows */
+.task-row-done {
+  background-color: #f0fdf4 !important;
+  opacity: 0.7;
+}
+.task-title-done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* overdue rows */
+.task-row-overdue {
+  background-color: #fef2f2 !important;
+}
+.task-row-overdue:hover {
+  border-left-color: #ef4444 !important;
+}
+
+/* ── Action buttons ──────────────────────────────────────────── */
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+/* ── Analytics cards ────────────────────────────────────────── */
+.stat-card {
+  border: none;
+  border-radius: var(--stm-card-radius);
+  box-shadow: var(--stm-shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Completion ring ─────────────────────────────────────────── */
+.completion-ring {
+  width: 72px;
+  height: 72px;
+}
+.completion-ring-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 6;
+}
+.completion-ring-fg {
+  fill: none;
+  stroke: #22c55e;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+/* ── Toast polish ────────────────────────────────────────────── */
+.toast {
+  border-radius: var(--stm-card-radius) !important;
+  border: none !important;
+}
+
+/* ── Modal polish ────────────────────────────────────────────── */
+.modal-content {
+  border: none;
+  border-radius: var(--stm-card-radius);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Forms ────────────────────────────────────────────────────── */
+.form-control, .form-select {
+  border-radius: 8px;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--stm-primary);
+  box-shadow: 0 0 0 3px var(--stm-primary-light);
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tab-pane.active {
+  animation: fadeInUp 0.25s ease-out;
+}
+
